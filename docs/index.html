@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Audio samples for "NU-Wave: A Diffusion model for Audio Super Resolution"</title>
+
+  </head>
+  <h2>Audio samples for "NU-Wave: A Diffusion model for Audio Super Resolution"</h2>
+  
+    </article>
+    <div><p><b>Paper(will updated):</b> <a href="https://arxiv.org/abs/TBD">arXiv:TBD</a> (Submitted to INTERSPEECH 2021)</p></div>
+    <div><p><b>Code:</b> <a href="https://github.com/mindslab-ai/nuwave">mindslab-ai/nuwave @ GitHub</a>
+      <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+     </p></div>
+    <div><p><b>Authors:</b> Junhyeok Lee, Seungu Han @<a href="https://mindslab.ai">MINDsLab Inc.</a>, SNU</p></div>
+    <div><p><b>Abstract:</b>
+      Abstract
+      In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on the neural vocoders based on diffusion probabilistic models. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), logspectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity than baselines (5.4-21%) as 3.0M parameters. The audio samples of our model are available at https://mindslab-ai.github.io/nuwave, and the code will be made available soon.
+    </p></div>
+    <p>This page contains a set of audio samples in support of the paper: it is suggested that the reader listen to the samples in conjunction with reading the paper. </br>
+    <b>All utterances were unseen during training, and the results are uncurated (NOT cherry-picked) unless specified.</b></p>
+
+  <body style="font-family: Helvetica">
+
+  	<br> </br>
+    <h3> Section &#8544;: Examples for single speaker 24 kHz to 48 kHz upsampling</h3>
+    This section contain examples for single speaker, "p225" from VCTK datast. Upsamplring rate is 2, upsampling from 24kHz to 48kHz
+    <br> </br>
+    <table>
+      <thead>
+        <tr>
+          <th align="middle">Original low resolution (24 kHz)</th>
+          <th align="middle">Original high resolution (48 kHz)</th>
+          <th align="middle">Linear Interpolation (48 kHz)</th>
+          <th align="middle">U-Net (48 kHz)</th>
+          <th align="middle">MU-GAN (48 kHz)</th>
+          <th align="middle">NU-Wave (48 kHz)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/original_24k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/original_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/linear_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/unet_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/mugan_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/nuwave_48k/sample_0.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/original_24k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/original_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/linear_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/unet_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/mugan_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x2/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <br> </br>
+    <h3> Section &#8545;: Examples for multi speaker 24 kHz to 48 kHz upsampling</h3>
+    This section contain examples for unseen speakers. The model is trained with first 100 speakers of VCTK dataset and this samples are from remainder 8 speakers. Upsampling rate is 2, upsampling from 24kHz to 48kHz
+
+    <br> </br>
+    <table>
+        <thead>
+          <tr>
+            <th align="middle">Original low resolution (24 kHz)</th>
+            <th align="middle">Original high resolution (48 kHz)</th>
+            <th align="middle">Linear Interpolation (48 kHz)</th>
+            <th align="middle">U-Net (48 kHz)</th>
+            <th align="middle">MU-GAN (48 kHz)</th>
+            <th align="middle">NU-Wave (48 kHz)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_24k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/linear_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/unet_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/mugan_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+    </table>
+    <br> </br>
+    <h3> Section &#8544;: Examples for single speaker 16 kHz to 48 kHz upsampling</h3>
+    This section contain examples for single speaker, "p225" from VCTK datast. Upsamplring rate is 2, upsampling from 24kHz to 48kHz
+
+    <br> </br>
+    <table>
+      <thead>
+          <tr>
+            <th align="middle">Original low resolution (16 kHz)</th>
+            <th align="middle">Original high resolution (48 kHz)</th>
+            <th align="middle">Linear Interpolation (48 kHz)</th>
+            <th align="middle">U-Net (48 kHz)</th>
+            <th align="middle">MU-GAN (48 kHz)</th>
+            <th align="middle">NU-Wave (48 kHz)</th>
+          </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_16k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/linear_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/unet_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/mugan_48k/sample_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/nuwave_48k/sample_0.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_16k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/linear_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/unet_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/mugan_48k/sample_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
+        </tr>
+
+      </tbody>
+    </table>
+    <br> </br>
+
+    <h3> Section &#8545;: Examples for multi speaker 16 kHz to 48 kHz upsampling</h3>
+    This section contain examples for unseen speakers. The model is trained with first 100 speakers of VCTK dataset and this samples are from remainder 8 speakers. Upsampling rate is 3, upsampling from 16kHz to 48kHz
+
+    <br> </br>
+    <table>
+        <thead>
+          <tr>
+            <th align="middle">Original low resolution (16 kHz)</th>
+            <th align="middle">Original high resolution (48 kHz)</th>
+            <th align="middle">Linear Interpolation (48 kHz)</th>
+            <th align="middle">U-Net (48 kHz)</th>
+            <th align="middle">MU-GAN (48 kHz)</th>
+            <th align="middle">NU-Wave (48 kHz)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_16k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/linear_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/unet_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/mugan_48k/sample_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+    </table>
+    <br> </br>
+  </body>
+</html>
