@@ -1,9 +1,9 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Audio samples for "NU-Wave: A Diffusion model for Audio Super Resolution"</title>
+  <title>Audio samples for "NU-Wave: A Diffusion model for Neural Audio Upsampling"</title>
 
   </head>
-  <h2>Audio samples for "NU-Wave: A Diffusion model for Audio Super Resolution"</h2>
+  <h2>Audio samples for "NU-Wave: A Diffusion model for Neural Audio Upsampling"</h2>
   
     </article>
     <div><p><b>Paper(will updated):</b> <a href="https://arxiv.org/abs/TBD">arXiv:TBD</a> (Submitted to INTERSPEECH 2021)</p></div>
@@ -12,9 +12,12 @@
      </p></div>
     <div><p><b>Authors:</b> Junhyeok Lee, Seungu Han @<a href="https://mindslab.ai">MINDsLab Inc.</a>, SNU</p></div>
     <div><p><b>Abstract:</b>
-      In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on the neural vocoders based on diffusion probabilistic models. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), logspectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity than baselines (5.4-21%) as 3.0M parameters. The audio samples of our model are available at https://mindslab-ai.github.io/nuwave, and the code will be made available soon.
+        In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on neural vocoders. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), log-spectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity (3.0M parameters) than baselines (5.4-21%). The audio samples of our model are available at https://mindslab-ai.github.io/nuwave, and the code will be made available soon.
     </p></div>
+
+  	<br> </br>
     <img src="sampling.gif" width="800px" class="center">
+  	<br> </br>
     <p>This page contains a set of audio samples to support the paper; we suggest that the reader listen to the samples when reading the paper.</br>
     <b>All utterances were unseen during training, and the results are uncurated (NOT cherry-picked) unless specified.</b></p>
 
@@ -163,7 +166,7 @@
     </table>
     <br> </br>
 
-    <h3> Section &#8547;: Examples for multi speaker (unseen during training) upsampled from 16kHz to 48kHz.</h3>
+    <h3> Section &#8547;: Examples for multi speaker (unseen speaker during training) upsampled from 16kHz to 48kHz.</h3>
         This section contains examples for the unseen speakers. The model is trained on the first 100 speakers of the VCTK dataset. The following samples are generated for the remaining 8 speakers. The upsampling rate is 3 (from 16kHz to 48kHz).
 
     <br> </br>
