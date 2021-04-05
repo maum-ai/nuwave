@@ -1,5 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Audio samples for "NU-Wave: A Diffusion model for Audio Super Resolution"</title>
@@ -14,17 +12,16 @@
      </p></div>
     <div><p><b>Authors:</b> Junhyeok Lee, Seungu Han @<a href="https://mindslab.ai">MINDsLab Inc.</a>, SNU</p></div>
     <div><p><b>Abstract:</b>
-      Abstract
       In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on the neural vocoders based on diffusion probabilistic models. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), logspectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity than baselines (5.4-21%) as 3.0M parameters. The audio samples of our model are available at https://mindslab-ai.github.io/nuwave, and the code will be made available soon.
     </p></div>
-    <p>This page contains a set of audio samples in support of the paper: it is suggested that the reader listen to the samples in conjunction with reading the paper. </br>
+    <p>This page contains a set of audio samples to support the paper; we suggest that the reader listen to the samples when reading the paper.</br>
     <b>All utterances were unseen during training, and the results are uncurated (NOT cherry-picked) unless specified.</b></p>
 
   <body style="font-family: Helvetica">
 
   	<br> </br>
-    <h3> Section &#8544;: Examples for single speaker 24 kHz to 48 kHz upsampling</h3>
-    This section contain examples for single speaker, "p225" from VCTK datast. Upsamplring rate is 2, upsampling from 24kHz to 48kHz
+    <h3> Section &#8544;: Examples for SingleSpeaker (seen speaker during training) upsampled from 24kHz to 48kHz.</h3>
+    This section contains examples for the speaker “p225" from the VCTK dataset. The upsampling rate is 2 (from 24kHz to 48kHz).
     <br> </br>
     <table>
       <thead>
@@ -61,8 +58,8 @@
 
 
     <br> </br>
-    <h3> Section &#8545;: Examples for multi speaker 24 kHz to 48 kHz upsampling</h3>
-    This section contain examples for unseen speakers. The model is trained with first 100 speakers of VCTK dataset and this samples are from remainder 8 speakers. Upsampling rate is 2, upsampling from 24kHz to 48kHz
+    <h3> Section &#8545;: Examples for MultiSpeaker (unseen speaker during training) upsampled from 24kHz to 48kHz.</h3>
+        This section contains examples for the unseen speakers. The model is trained on the first 100 speakers of the VCTK dataset. The following samples are generated for the remaining 8 speakers. The upsampling rate is 2 (from 24kHz to 48kHz). 
 
     <br> </br>
     <table>
@@ -79,6 +76,15 @@
 
         <tbody>
           <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_24k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/linear_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/unet_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/mugan_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/nuwave_48k/sample_0.wav" type="audio/wav"></audio></td>
+          </tr>
+
+          <tr>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_24k/sample_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_48k/sample_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/linear_48k/sample_1.wav" type="audio/wav"></audio></td>
@@ -86,11 +92,38 @@
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/mugan_48k/sample_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
           </tr>
+
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_24k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/linear_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/unet_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/mugan_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/nuwave_48k/sample_2.wav" type="audio/wav"></audio></td>
+          </tr>
+
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_24k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/linear_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/unet_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/mugan_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/nuwave_48k/sample_3.wav" type="audio/wav"></audio></td>
+          </tr>
+
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_24k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/original_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/linear_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/unet_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/mugan_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/nuwave_48k/sample_4.wav" type="audio/wav"></audio></td>
+          </tr>
         </tbody>
     </table>
     <br> </br>
-    <h3> Section &#8544;: Examples for single speaker 16 kHz to 48 kHz upsampling</h3>
-    This section contain examples for single speaker, "p225" from VCTK datast. Upsamplring rate is 2, upsampling from 24kHz to 48kHz
+    <h3> Section &#8546;: Examples for SingleSpeaker (seen speaker during training) upsampled from 16kHz to 48kHz.</h3>
+        This section contains examples for the speaker “p225" from the VCTK dataset. The upsampling rate is 3 (from 16kHz to 48kHz).
 
     <br> </br>
     <table>
@@ -128,8 +161,8 @@
     </table>
     <br> </br>
 
-    <h3> Section &#8545;: Examples for multi speaker 16 kHz to 48 kHz upsampling</h3>
-    This section contain examples for unseen speakers. The model is trained with first 100 speakers of VCTK dataset and this samples are from remainder 8 speakers. Upsampling rate is 3, upsampling from 16kHz to 48kHz
+    <h3> Section &#8547;: Examples for multi speaker (unseen during training) upsampled from 16kHz to 48kHz.</h3>
+        This section contains examples for the unseen speakers. The model is trained on the first 100 speakers of the VCTK dataset. The following samples are generated for the remaining 8 speakers. The upsampling rate is 3 (from 16kHz to 48kHz).
 
     <br> </br>
     <table>
