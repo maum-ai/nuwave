@@ -15,15 +15,15 @@
         In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on neural vocoders. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), log-spectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity (3.0M parameters) than baselines (5.4-21%). The audio samples of our model are available at https://mindslab-ai.github.io/nuwave, and the code will be made available soon.
     </p></div>
 
+  <body style="font-family: Helvetica">
   	<br> </br>
+    <h3> Illustrain of NU-Wave Sampling (8 iterations) </h3>
     <img src="sampling.gif" width="800px" class="center">
   	<br> </br>
     <p>This page contains a set of audio samples to support the paper; we suggest that the reader listen to the samples when reading the paper.</br>
     <b>All utterances were unseen during training, and the results are uncurated (NOT cherry-picked) unless specified.</b></p>
 
-  <body style="font-family: Helvetica">
 
-  	<br> </br>
     <h3> Section &#8544;: Examples for SingleSpeaker (seen speaker during training) upsampled from 24kHz to 48kHz.</h3>
     This section contains examples for the speaker “p225" from the VCTK dataset. The upsampling rate is 2 (from 24kHz to 48kHz).
     <br> </br>
@@ -190,6 +190,33 @@
           <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
         </tr>
 
+        <tr>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_16k/sample_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_48k/sample_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/linear_48k/sample_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/unet_48k/sample_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/mugan_48k/sample_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/nuwave_48k/sample_2.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_16k/sample_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_48k/sample_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/linear_48k/sample_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/unet_48k/sample_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/mugan_48k/sample_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/nuwave_48k/sample_3.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_16k/sample_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/original_48k/sample_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/linear_48k/sample_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/unet_48k/sample_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/mugan_48k/sample_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 250px; height: 50px"><source src="samples/single_x3/nuwave_48k/sample_4.wav" type="audio/wav"></audio></td>
+        </tr>
+
       </tbody>
     </table>
     <br> </br>
@@ -212,6 +239,15 @@
 
         <tbody>
           <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_16k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/linear_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/unet_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/mugan_48k/sample_0.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/nuwave_48k/sample_0.wav" type="audio/wav"></audio></td>
+          </tr>
+
+          <tr>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_16k/sample_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_48k/sample_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/linear_48k/sample_1.wav" type="audio/wav"></audio></td>
@@ -219,6 +255,34 @@
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/mugan_48k/sample_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
           </tr>
+
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_16k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/linear_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/unet_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/mugan_48k/sample_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/nuwave_48k/sample_2.wav" type="audio/wav"></audio></td>
+          </tr>
+
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_16k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/linear_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/unet_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/mugan_48k/sample_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/nuwave_48k/sample_3.wav" type="audio/wav"></audio></td>
+          </tr>
+
+          <tr>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_16k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/original_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/linear_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/unet_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/mugan_48k/sample_4.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x3/nuwave_48k/sample_4.wav" type="audio/wav"></audio></td>
+          </tr>
+
         </tbody>
     </table>
     <br> </br>
