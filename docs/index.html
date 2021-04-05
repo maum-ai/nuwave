@@ -14,6 +14,7 @@
     <div><p><b>Abstract:</b>
       In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on the neural vocoders based on diffusion probabilistic models. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), logspectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity than baselines (5.4-21%) as 3.0M parameters. The audio samples of our model are available at https://mindslab-ai.github.io/nuwave, and the code will be made available soon.
     </p></div>
+    <img src="sampling.gif" width="800px" class="center">
     <p>This page contains a set of audio samples to support the paper; we suggest that the reader listen to the samples when reading the paper.</br>
     <b>All utterances were unseen during training, and the results are uncurated (NOT cherry-picked) unless specified.</b></p>
 
@@ -119,7 +120,6 @@
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/mugan_48k/sample_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 250px; height: 50px"><source src="samples/multi_x2/nuwave_48k/sample_1.wav" type="audio/wav"></audio></td>
           </tr>
-
 
         </tbody>
     </table>
