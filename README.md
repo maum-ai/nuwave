@@ -12,10 +12,10 @@ Code will be available soon! (Due to first author's mandatory military training,
 ## References
 
 This implementation uses code from following repositories:
--[J.Ho's official DDPM implementation](https://github.com/hojonathanho/diffusion)
--[lucidrain's DDPM pytorch implementation](https://github.com/lucidrains/denoising-diffusion-pytorch)
--[ivanvok's WaveGrad pytorch implementation](https://github.com/ivanvovk/WaveGrad)
--[lmnt-com's DiffWave pytorch implementation](https://github.com/lmnt-com/diffwave)
+- [J.Ho's official DDPM implementation](https://github.com/hojonathanho/diffusion)
+- [lucidrain's DDPM pytorch implementation](https://github.com/lucidrains/denoising-diffusion-pytorch)
+- [ivanvok's WaveGrad pytorch implementation](https://github.com/ivanvovk/WaveGrad)
+- [lmnt-com's DiffWave pytorch implementation](https://github.com/lmnt-com/diffwave)
 
 This README and the webpage for the audio samples are inspired by:
 - [Tips for Publishing Research Code](https://github.com/paperswithcode/releasing-research-code)
