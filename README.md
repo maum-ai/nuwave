@@ -1,13 +1,12 @@
 # NU-Wave &mdash; Official PyTorch Implementation
 
-**NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling**
+**NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling**<br>
 Junhyeok Lee, Seungu Han @ [MINDsLab Inc.](https://mindslab.ai), SNU
 
-Paper: arXiv: https://arxiv.org/abs/2104.02321 (Submitted to INTERSPEECH 2021)<br>
+Paper(arXiv): https://arxiv.org/abs/2104.02321 (Accepted to INTERSPEECH 2021)<br>
 Audio Samples: https://mindslab-ai.github.io/nuwave<br>
 
-Code will be available soon! (Due to first author's mandatory military training, we are planning to release code *after June*)
-
+Update: Our paper is accepted to INTERSPEECH2021!!! We are planning to update paper and release code during June!
 
 ## References
 
