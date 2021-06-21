@@ -25,18 +25,18 @@ run `for_test.py` or `test.py`
 ## Repository Structure
 ```
 .
-├── Dockerfile				
-├── dataloader.py			# Dataloader for train/val(=test)
-├── filters.py				# Filter implementation
-├── test.py					# Test with lightning_loop.
-├── for_test.py				# Test with for_loop. Recommended due to device dependency of lightning
-├── hparameter.yaml			# Config
-├── lightning_model.py		# NU-Wave implementation. DDPM is based on ivanvok's WaveGrad implementation
-├── model.py				# NU-Wave model based on lmnt-com's DiffWave implementation
+├── Dockerfile
+├── dataloader.py           # Dataloader for train/val(=test)
+├── filters.py              # Filter implementation
+├── test.py                 # Test with lightning_loop.
+├── for_test.py             # Test with for_loop. Recommended due to device dependency of lightning
+├── hparameter.yaml         # Config
+├── lightning_model.py      # NU-Wave implementation. DDPM is based on ivanvok's WaveGrad implementation
+├── model.py                # NU-Wave model based on lmnt-com's DiffWave implementation
 ├── requirement.txt         # requirement libraries
 ├── sampling.py             # Sampling a file
 ├── trainer.py              # Lightning trainer
-├── README.md
+├── README.md           
 ├── utils
 │  ├── stft.py              # STFT layer
 │  ├── tblogger.py          # Tensorboard Logger for lightning
