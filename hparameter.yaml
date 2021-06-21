@@ -1,0 +1,41 @@
+train:
+  batch_size: 18
+  lr: 0.00003
+  weight_decay: 0.00
+  num_workers: 64
+  gpus: 2 #ddp
+  opt_eps: 1e-9
+  beta1: 0.5
+  beta2: 0.999
+
+data:
+  dir: '/DATA1/VCTK/VCTK-Corpus/wav48' #dir/spk/format
+  format: '*mic1.pt'
+  cv_ratio: (100./108., 8./108., 0.00) #train/val/test
+
+audio:
+  sr: 48000
+  nfft: 1024
+  hop: 256
+  ratio: 2 #upscale_ratio
+  length: 32768 #32*1024 ~ 1sec
+
+arch:
+  residual_layers: 30 #
+  residual_channels: 64
+  dilation_cycle_length: 10
+  pos_emb_dim: 512 
+
+ddpm:
+  max_step: 1000
+  noise_schedule: "torch.linspace(1e-6, 0.006, hparams.ddpm.max_step)"
+  pos_emb_scale: 50000
+  pos_emb_channels: 128 
+  infer_step: 8
+  infer_schedule: "torch.tensor([1e-6,2e-6,1e-5,1e-4,1e-3,1e-2,1e-1,9e-1])"
+
+log:
+  name: 'nuwave_x2'
+  checkpoint_dir: 'checkpoint'
+  tensorboard_dir: 'tensorboard'
+  test_result_dir: 'test_sample/result'
