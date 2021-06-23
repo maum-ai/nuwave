@@ -8,19 +8,68 @@ Audio Samples: https://mindslab-ai.github.io/nuwave<br>
 
 Official Pytorch+[Lightning](https://github.com/PyTorchLightning/pytorch-lightning) Implementation for NU-Wave.<br>
 
+![](./docs/sampling.gif)
 Update: **CODE RELEASED!** README is still updating.<br>
-TODO: How to preprocessing/ training/ evaluation
+TODO: How to preprocessing/ training/ evaluation<br>
+
+
+## Requirements
+[Pytorch](https://pytorch.org/) >=1.7.0 for nn.SiLU(swish activation)
+[Pytorch-Lightning](https://github.com/PyTorchLightning/pytorch-lightning)==1.1.6
+The requirements are highlighted in [requirements.txt](./requirements.txt).
+We also provide docker setup [Dockerfile](./Dockerfile).
 
 ## Preprocessing
-TODO
+Before running our project, you need to download and preprocess dataset to `.pt` files
+1. Download [VCTK dataset](https://datashare.ed.ac.uk/handle/10283/3443)
+2. Remove speaker `p280` and `p315`
+3. Modify path of downloaded dataset `data:dir` in `hparameters.yaml`
+4. run `utils/wav2pt.py`
 
 ## Training
-TODO
-run `trainer.py`
+1. Adjust `hparameters.yaml`, especially `train` section.
+```
+train:
+  batch_size: 18 # Dependent on GPU memory size
+  lr: 0.00003
+  weight_decay: 0.00
+  num_workers: 64 # Dependent on CPU cores
+  gpus: 2 # number of GPUs
+  opt_eps: 1e-9
+  beta1: 0.5
+  beta2: 0.999
+```
+2. run `trainer.py`. If you want to resume training, check parser.
+```python
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-r', '--resume_from', type =int,\
+            required = False, help = "Resume Checkpoint epoch number")
+    parser.add_argument('-s', '--restart', action = "store_true",\
+            required = False, help = "Significant change occured, use this")
+    parser.add_argument('-e', '--ema', action = "store_true",\
+            required = False, help = "Start from ema checkpoint")
+    args = parser.parse_args()
+```
 
-## Evaludation
+## Evaluation
 TODO
 run `for_test.py` or `test.py`
+
+## References
+This implementation uses code from following repositories:
+- [J.Ho's official DDPM implementation](https://github.com/hojonathanho/diffusion)
+- [lucidrains' DDPM pytorch implementation](https://github.com/lucidrains/denoising-diffusion-pytorch)
+- [ivanvovk's WaveGrad pytorch implementation](https://github.com/ivanvovk/WaveGrad)
+- [lmnt-com's DiffWave pytorch implementation](https://github.com/lmnt-com/diffwave)
+
+This README and the webpage for the audio samples are inspired by:
+- [Tips for Publishing Research Code](https://github.com/paperswithcode/releasing-research-code)
+- [Audio samples webpage of DCA](https://google.github.io/tacotron/publications/location_relative_attention/)
+- [Cotatron](https://github.com/mindslab-ai/cotatron/)
+- [Audio samples wabpage of WaveGrad](https://wavegrad.github.io)
+
+The audio samples on our [webpage](https://mindslab-ai.github.io/nuwave/) are partially derived from:
+- [VCTK dataset(0.92)](https://datashare.ed.ac.uk/handle/10283/3443): 46 hours of English speech from 108 speakers.
 
 ## Repository Structure
 ```
@@ -37,35 +86,14 @@ run `for_test.py` or `test.py`
 ├── sampling.py             # Sampling a file
 ├── trainer.py              # Lightning trainer
 ├── README.md           
+├── LICSENSE
 ├── utils
 │  ├── stft.py              # STFT layer
 │  ├── tblogger.py          # Tensorboard Logger for lightning
 │  └── wav2pt.py            # Preprocessing
 └── docs                    # For github.io
-    └─ ...
+   └─ ...
 ```
-
-## Requirements
-Pytorch >=1.7.0 for nn.SiLU(swish)
-Pytorch-Lightning==1.1.6
-The requirements are highlighted in [requirements.txt](./requirements.txt).
-We also provide docker setup [Dockerfile](./Dockerfile).
-
-## References
-This implementation uses code from following repositories:
-- [J.Ho's official DDPM implementation](https://github.com/hojonathanho/diffusion)
-- [lucidrain's DDPM pytorch implementation](https://github.com/lucidrains/denoising-diffusion-pytorch)
-- [ivanvok's WaveGrad pytorch implementation](https://github.com/ivanvovk/WaveGrad)
-- [lmnt-com's DiffWave pytorch implementation](https://github.com/lmnt-com/diffwave)
-
-This README and the webpage for the audio samples are inspired by:
-- [Tips for Publishing Research Code](https://github.com/paperswithcode/releasing-research-code)
-- [Audio samples webpage of DCA](https://google.github.io/tacotron/publications/location_relative_attention/)
-- [Cotatron](https://github.com/mindslab-ai/cotatron/)
-- [Audio samples wabpage of WaveGrad](https://wavegrad.github.io)
-
-The audio samples on our [webpage](https://mindslab-ai.github.io/nuwave/) are partially derived from:
-- [VCTK](https://datashare.ed.ac.uk/handle/10283/3443): 46 hours of English speech from 108 speakers.
 
 ## Citation & Contact
 If this repository useful for your research, please consider citing!
