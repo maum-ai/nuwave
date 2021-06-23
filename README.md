@@ -14,10 +14,10 @@ TODO: How to preprocessing/ training/ evaluation<br>
 
 
 ## Requirements
-[Pytorch](https://pytorch.org/) >=1.7.0 for nn.SiLU(swish activation)
-[Pytorch-Lightning](https://github.com/PyTorchLightning/pytorch-lightning)==1.1.6
-The requirements are highlighted in [requirements.txt](./requirements.txt).
-We also provide docker setup [Dockerfile](./Dockerfile).
+[Pytorch](https://pytorch.org/) >=1.7.0 for nn.SiLU(swish activation)<br>
+[Pytorch-Lightning](https://github.com/PyTorchLightning/pytorch-lightning)==1.1.6<br>
+The requirements are highlighted in [requirements.txt](./requirements.txt).<br>
+We also provide docker setup [Dockerfile](./Dockerfile).<br>
 
 ## Preprocessing
 Before running our project, you need to download and preprocess dataset to `.pt` files
@@ -52,7 +52,7 @@ train:
 ```
 
 ## Evaluation
-TODO
+TODO<br>
 run `for_test.py` or `test.py`
 
 ## References
