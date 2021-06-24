@@ -10,14 +10,14 @@ Official Pytorch+[Lightning](https://github.com/PyTorchLightning/pytorch-lightni
 
 ![](./docs/sampling.gif)
 Update: **CODE RELEASED!** README is still updating.<br>
-TODO: How to preprocessing/ training/ evaluation<br>
+TODO: How to evaluate<br>
 
 
 ## Requirements
-[Pytorch](https://pytorch.org/) >=1.7.0 for nn.SiLU(swish activation)<br>
-[Pytorch-Lightning](https://github.com/PyTorchLightning/pytorch-lightning)==1.1.6<br>
-The requirements are highlighted in [requirements.txt](./requirements.txt).<br>
-We also provide docker setup [Dockerfile](./Dockerfile).<br>
+- [Pytorch](https://pytorch.org/) >=1.7.0 for nn.SiLU(swish activation)<br>
+- [Pytorch-Lightning](https://github.com/PyTorchLightning/pytorch-lightning)==1.1.6<br>
+- The requirements are highlighted in [requirements.txt](./requirements.txt).<br>
+- We also provide docker setup [Dockerfile](./Dockerfile).<br>
 
 ## Preprocessing
 Before running our project, you need to download and preprocess dataset to `.pt` files
@@ -25,10 +25,13 @@ Before running our project, you need to download and preprocess dataset to `.pt`
 2. Remove speaker `p280` and `p315`
 3. Modify path of downloaded dataset `data:dir` in `hparameters.yaml`
 4. run `utils/wav2pt.py`
+```shell script
+$ python utils/wav2pt.py
+```
 
 ## Training
 1. Adjust `hparameters.yaml`, especially `train` section.
-```
+```yaml
 train:
   batch_size: 18 # Dependent on GPU memory size
   lr: 0.00003
@@ -39,7 +42,11 @@ train:
   beta1: 0.5
   beta2: 0.999
 ```
-2. run `trainer.py`. If you want to resume training, check parser.
+2. run `trainer.py`.
+```shell script
+$ pyton trainer.py
+```
+If you want to resume training from checkpoint, check parser.
 ```python
     parser = argparse.ArgumentParser()
     parser.add_argument('-r', '--resume_from', type =int,\
@@ -50,6 +57,12 @@ train:
             required = False, help = "Start from ema checkpoint")
     args = parser.parse_args()
 ```
+- During training, tensorboard logger is logging loss, spectrogram and audio.
+```shell script
+$ tensorboard --logdir=./tensorboard --bind_all
+```
+![](./docs/images/loss.png)
+![](./docs/images/spec.png)
 
 ## Evaluation
 TODO<br>
