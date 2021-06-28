@@ -9,8 +9,7 @@ Audio Samples: https://mindslab-ai.github.io/nuwave<br>
 Official Pytorch+[Lightning](https://github.com/PyTorchLightning/pytorch-lightning) Implementation for NU-Wave.<br>
 
 ![](./docs/sampling.gif)
-Update: **CODE RELEASED!** README is still updating.<br>
-TODO: How to evaluate<br>
+Update: **CODE RELEASED! README is DONE**.<br>
 
 
 ## Requirements
@@ -44,7 +43,7 @@ train:
 ```
 2. run `trainer.py`.
 ```shell script
-$ pyton trainer.py
+$ python trainer.py
 ```
 If you want to resume training from checkpoint, check parser.
 ```python
@@ -65,8 +64,24 @@ $ tensorboard --logdir=./tensorboard --bind_all
 ![](./docs/images/spec.png)
 
 ## Evaluation
-TODO<br>
 run `for_test.py` or `test.py`
+```shell script
+$ python test.py -r {checkpoint_number} {-e:option, if ema} {--save:option}
+or
+$ python for_test.py -r {checkpoint_number} {-e:option, if ema} {--save:option}
+```
+Please check parser.
+```python
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-r', '--resume_from', type =int,
+                required = True, help = "Resume Checkpoint epoch number")
+    parser.add_argument('-e', '--ema', action = "store_true",
+                required = False, help = "Start from ema checkpoint")
+    parser.add_argument('--save', action = "store_true",
+               required = False, help = "Save file")
+```
+While we provide lightning style test code `test.py`, it has device dependency. 
+Thus, we recommend to use `for_test.py`.
 
 ## References
 This implementation uses code from following repositories:
