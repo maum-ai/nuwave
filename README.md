@@ -41,11 +41,19 @@ train:
   beta1: 0.5
   beta2: 0.999
 ```
+- If you want to train with single speaker, use `VCTKSingleSpkDataset` instead of `VCTKMultiSpkDataset` for dataset in `dataloader.py`.
+- Adjust `data` section in `hparameters.yaml`.
+```yaml
+data:
+  dir: '/DATA1/VCTK/VCTK-Corpus/wav48/p225' #dir/spk/format
+  format: '*mic1.pt'
+  cv_ratio: (223./231., 8./231., 0.00) #train/val/test
+```
 2. run `trainer.py`.
 ```shell script
 $ python trainer.py
 ```
-If you want to resume training from checkpoint, check parser.
+- If you want to resume training from checkpoint, check parser.
 ```python
     parser = argparse.ArgumentParser()
     parser.add_argument('-r', '--resume_from', type =int,\
