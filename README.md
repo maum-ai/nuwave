@@ -41,7 +41,7 @@ train:
   beta1: 0.5
   beta2: 0.999
 ```
-- If you want to train with single speaker, use `VCTKSingleSpkDataset` instead of `VCTKMultiSpkDataset` for dataset in `dataloader.py`.
+- If you want to train with single speaker, use `VCTKSingleSpkDataset` instead of `VCTKMultiSpkDataset` for dataset in `dataloader.py`. And use `batch_size=1` for validation dataloader.
 - Adjust `data` section in `hparameters.yaml`.
 ```yaml
 data:
