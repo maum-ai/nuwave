@@ -9,7 +9,7 @@ Audio Samples: https://mindslab-ai.github.io/nuwave<br>
 Official Pytorch+[Lightning](https://github.com/PyTorchLightning/pytorch-lightning) Implementation for NU-Wave.<br>
 
 ![](./docs/sampling.gif)
-Update: **CODE RELEASED! README is DONE**.<br>
+Update: torch.log --> torch.log10 on lsd, value and lsd formula in the paper is right.<br>
 
 
 ## Requirements

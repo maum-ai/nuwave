@@ -37,8 +37,8 @@ class NuWave(pl.LightningModule):
                         /torch.norm(pred -target, dim =-1).clamp(min =1e-8))).mean()
 
             def lsd(pred, target):
-                sp = torch.log(self.stft(pred).square().clamp(1e-8))
-                st = torch.log(self.stft(target).square().clamp(1e-8))
+                sp = torch.log10(self.stft(pred).square().clamp(1e-8))
+                st = torch.log10(self.stft(target).square().clamp(1e-8))
                 return (sp - st).square().mean(dim=1).sqrt().mean()
 
             self.snr = snr
