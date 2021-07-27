@@ -3,8 +3,7 @@
 **NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling**<br>
 Junhyeok Lee, Seungu Han @ [MINDsLab Inc.](https://github.com/mindslab-ai), SNU
 
-Paper(arXiv): https://arxiv.org/abs/2104.02321 (Accepted to INTERSPEECH 2021)<br>
-Audio Samples: https://mindslab-ai.github.io/nuwave<br>
+[![arXiv](https://img.shields.io/badge/arXiv-2104.02321-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2104.02321) [![GitHub Repo stars](https://img.shields.io/github/stars/mindslab-ai/nuwave?color=yellow&label=NU-Wave&logo=github&style=flat-square)](https://github.com/mindslab-ai/nuwave) [![githubio](https://img.shields.io/badge/GitHub.io-audio_samples-blue?logo=Github&style=flat-square)](https://mindslab-ai.github.io/nuwave/)
 
 Official Pytorch+[Lightning](https://github.com/PyTorchLightning/pytorch-lightning) Implementation for NU-Wave.<br>
 
@@ -22,14 +21,14 @@ Update: torch.log --> torch.log10 on lsd, value and lsd formula in the paper is 
 Before running our project, you need to download and preprocess dataset to `.pt` files
 1. Download [VCTK dataset](https://datashare.ed.ac.uk/handle/10283/3443)
 2. Remove speaker `p280` and `p315`
-3. Modify path of downloaded dataset `data:dir` in `hparameters.yaml`
+3. Modify path of downloaded dataset `data:dir` in `hparameter.yaml`
 4. run `utils/wav2pt.py`
 ```shell script
 $ python utils/wav2pt.py
 ```
 
 ## Training
-1. Adjust `hparameters.yaml`, especially `train` section.
+1. Adjust `hparameter.yaml`, especially `train` section.
 ```yaml
 train:
   batch_size: 18 # Dependent on GPU memory size
