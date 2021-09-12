@@ -3,12 +3,13 @@
 **NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling**<br>
 Junhyeok Lee, Seungu Han @ [MINDsLab Inc.](https://github.com/mindslab-ai), SNU
 
-[![arXiv](https://img.shields.io/badge/arXiv-2104.02321-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2104.02321) [![GitHub Repo stars](https://img.shields.io/github/stars/mindslab-ai/nuwave?color=yellow&label=NU-Wave&logo=github&style=flat-square)](https://github.com/mindslab-ai/nuwave) [![githubio](https://img.shields.io/badge/GitHub.io-audio_samples-blue?logo=Github&style=flat-square)](https://mindslab-ai.github.io/nuwave/)
+[![arXiv](https://img.shields.io/badge/arXiv-2104.02321-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2104.02321) [![GitHub Repo stars](https://img.shields.io/github/stars/mindslab-ai/nuwave?color=yellow&label=NU-Wave&logo=github&style=flat-square)](https://github.com/mindslab-ai/nuwave) [![githubio](https://img.shields.io/badge/GitHub.io-Audio_Samples-blue?logo=Github&style=flat-square)](https://mindslab-ai.github.io/nuwave/)
 
 Official Pytorch+[Lightning](https://github.com/PyTorchLightning/pytorch-lightning) Implementation for NU-Wave.<br>
 
 ![](./docs/sampling.gif)
-Update: torch.log --> torch.log10 on lsd, value and lsd formula in the paper is right.<br>
+
+Update: Bib is updated as [isca_archive](https://www.isca-speech.org/archive/interspeech_2021/lee21c_interspeech.html) <br>
 
 
 ## Requirements
@@ -24,7 +25,7 @@ Before running our project, you need to download and preprocess dataset to `.pt`
 3. Modify path of downloaded dataset `data:dir` in `hparameter.yaml`
 4. run `utils/wav2pt.py`
 ```shell script
-$ python utils/wav2pt.py
+python utils/wav2pt.py
 ```
 
 ## Training
@@ -73,9 +74,9 @@ $ tensorboard --logdir=./tensorboard --bind_all
 ## Evaluation
 run `for_test.py` or `test.py`
 ```shell script
-$ python test.py -r {checkpoint_number} {-e:option, if ema} {--save:option}
+python test.py -r {checkpoint_number} {-e:option, if ema} {--save:option}
 or
-$ python for_test.py -r {checkpoint_number} {-e:option, if ema} {--save:option}
+python for_test.py -r {checkpoint_number} {-e:option, if ema} {--save:option}
 ```
 Please check parser.
 ```python
@@ -132,13 +133,13 @@ The audio samples on our [webpage](https://mindslab-ai.github.io/nuwave/) are pa
 
 ## Citation & Contact
 If this repository useful for your research, please consider citing!
-Bibtex will be updated after INTERSPEECH 2021 conference.
 ```bib
-@article{lee2021nuwave,
-  title={NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling},
-  author={Lee, Junhyeok and Han, Seungu},
-  journal={arXiv preprint arXiv:2104.02321},
-  year={2021}
-}
-```
+@inproceedings{lee21nuwave,
+  author={Junhyeok Lee and Seungu Han},
+  title={{NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling}},
+  year=2021,
+  booktitle={Proc. Interspeech 2021},
+  pages={1634--1638},
+  doi={10.21437/Interspeech.2021-36}
+}```
 If you have a question or any kind of inquiries, please contact Junhyeok Lee at [jun3518@mindslab.ai](mailto:jun3518@mindslab.ai)
