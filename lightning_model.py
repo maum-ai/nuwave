@@ -33,7 +33,7 @@ class NuWave(pl.LightningModule):
             self.stft = STFTMag(2048, 512)
 
             def snr(pred, target):
-                return (10 *torch.log10(torch.norm(target, dim=-1) \
+                return (20 *torch.log10(torch.norm(target, dim=-1) \
                         /torch.norm(pred -target, dim =-1).clamp(min =1e-8))).mean()
 
             def lsd(pred, target):
