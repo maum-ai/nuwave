@@ -12,6 +12,8 @@ Official Pytorch+[Lightning](https://github.com/PyTorchLightning/pytorch-lightni
 Update: typo fixed [lightning_model.py](./lightning_model.py) line 36 `10` --> `20`<br>
 [Errata](./ERRATA.md) added for [isca_archive](https://www.isca-speech.org/archive/interspeech_2021/lee21c_interspeech.html) and [arXiv](https://arxiv.org/abs/2104.02321) <br>
 
+Checkpoint Contribution: Thanks to [freds0](https://github.com/freds0), he released his checkpoint at [issue#18](https://github.com/mindslab-ai/nuwave/issues/18)! 
+
 
 ## Requirements
 - [Pytorch](https://pytorch.org/) >=1.7.0 for nn.SiLU(swish activation)<br>
