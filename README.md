@@ -15,9 +15,10 @@ Update: typo fixed [lightning_model.py](./lightning_model.py) line 36 `10` --> `
 Checkpoint Contribution: Thanks to [freds0](https://github.com/freds0), he released his checkpoint at [issue#18](https://github.com/mindslab-ai/nuwave/issues/18)! 
 
 **Official Checkpoints for SingleSpeaker released [google_drive](https://drive.google.com/drive/folders/1pJ6KCs34DNaTCqKXJZretD7MLcAOb4yR?usp=sharing)**. 
-Sorry for late update. We will try to upload MultiSpeaker version and track issues, too.
 
-[NU-Wave 2](https://arxiv.org/abs/2206.08545) is accepted to Interspeech 2022! Code and *checkpoints* will be available soon!
+Since [NU-Wave 2 repo](https://github.com/mindslab-ai/nuwave2) is opened, we try to handle issue on new repo.
+
+[NU-Wave 2](https://arxiv.org/abs/2206.08545) is accepted to Interspeech 2022! Code and *checkpoints* are available at [github](https://github.com/mindslab-ai/nuwave2)!
 
 ## Requirements
 - [Pytorch](https://pytorch.org/) >=1.7.0 for nn.SiLU(swish activation)<br>
